@@ -1,5 +1,6 @@
 package com.tharuneniyan.chatapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -19,8 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         mAuth = FirebaseAuth.getInstance();
-
-
     }
 
     @Override
@@ -28,9 +27,11 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
+        if(currentUser == null){
+            Intent startIntent = new Intent( MainActivity.this, StartActivity.class);
+            startActivity(startIntent);
+            finish();
+        }
     }
 
-    private void updateUI(FirebaseUser currentUser) {
-    }
 }

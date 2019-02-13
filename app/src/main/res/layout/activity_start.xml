@@ -6,8 +6,6 @@
     android:gravity="center"
     tools:context=".StartActivity">
 
-
-
     <TextView
         android:id="@+id/TextView"
         android:layout_width="wrap_content"
@@ -24,6 +22,5 @@
         android:layout_marginLeft="50dp"
         android:gravity="center"
         android:text="@string/need_a_new_account" />
-
 
 </RelativeLayout>

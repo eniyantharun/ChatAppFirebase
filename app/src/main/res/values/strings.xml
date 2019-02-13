@@ -3,4 +3,8 @@
     <string name="this_is_main_page">This is main Page</string>
     <string name="welcome_page">Welcome To Lapit ChatApp</string>
     <string name="need_a_new_account">Need a New Account</string>
+    <string name="display_name">Display Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="create_account">create Account</string>
 </resources>
